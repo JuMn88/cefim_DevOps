@@ -7,7 +7,7 @@ jobs:
         steps:
             - uses: actions/checkout@v3
             - run: npm install
-            - run: npm run start
+            - run: npm run dev
     lint:
         runs-on: ubuntu-latest
         steps:

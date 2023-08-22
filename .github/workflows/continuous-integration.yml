@@ -1,20 +1,22 @@
 name: Continuous Integration
-run-name: ${{ github.actor }} istesting out GitHub Actions for CEFIM
+run-name: ${{ github.actor }} is testing out GitHub Actions for CEFIM
 on: [push, workflow_dispatch]
 jobs:
     build:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v3
-            - run: start
+            - run: npm run start
     lint:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v3
-            - run: lint /backend/index.js
-            - run: lint /frontend/index.html
+            - run: cd backend/
+            - run: npm run lint index.js
+            - run: cd ../frontend/
+            - run: npm run lint index.html
     test:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v3
-            - run: test
+            - run: npm run test

@@ -13,8 +13,8 @@ jobs:
         steps:
             - uses: actions/checkout@v3
             - run: npm install
-            - run: cd backend/ && npm run lint:fix index.js
-            - run: cd frontend/ && npm run lint:fix index.html
+            - run: cd backend/ && npm run lint index.js
+            - run: cd frontend/src && npm run lint main.jsx
     test:
         runs-on: ubuntu-latest
         steps:

@@ -14,7 +14,9 @@ jobs:
             - uses: actions/checkout@v3
             - run: npm install
             - run: cd backend/ && npm run lint index.js
-            - run: cd frontend/src && npm run lint main.jsx
+            - run: |
+                cd frontend/src/ && ls
+                npm run lint main.jsx
     test:
         runs-on: ubuntu-latest
         steps:

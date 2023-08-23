@@ -1,6 +1,12 @@
 name: Continuous Integration
 run-name: ${{ github.actor }} is testing out GitHub Actions for CEFIM
-on: [push, workflow_dispatch]
+
+on:
+    push:
+        branches:
+            - main
+    workflow_dispatch:
+
 jobs:
     build:
         runs-on: ubuntu-latest

@@ -21,7 +21,7 @@ jobs:
       steps:
           - uses: actions/checkout@v3
           - name: Installation de NodeJS, mise en cache et dépendances
-            uses: ./.github/actions/node-management-composite-action@v1
+            uses: ./.github/actions/node-management-composite-action
           - name: Build
             run: npm run build -w frontend
     lint-backend:
@@ -29,7 +29,7 @@ jobs:
         steps:
             - uses: actions/checkout@v3
             - name: Installation de NodeJS, mise en cache et dépendances
-              uses: ./.github/actions/node-management-composite-action@v1
+              uses: ./.github/actions/node-management-composite-action
             - name: Lint
               run: npm run lint -w backend
     lint-frontend:
@@ -37,7 +37,7 @@ jobs:
         steps:
             - uses: actions/checkout@v3
             - name: Installation de NodeJS, mise en cache et dépendances
-              uses: ./.github/actions/node-management-composite-action@v1
+              uses: ./.github/actions/node-management-composite-action
             - name: Lint
               run: npm run lint -w frontend
     test-backend:
@@ -45,7 +45,7 @@ jobs:
         steps:
             - uses: actions/checkout@v3
             - name: Installation de NodeJS, mise en cache et dépendances
-              uses: ./.github/actions/node-management-composite-action@v1
+              uses: ./.github/actions/node-management-composite-action
             - name: Test
               run: npm run test -w backend
     test-frontend:
@@ -53,6 +53,6 @@ jobs:
         steps:
             - uses: actions/checkout@v3
             - name: Installation de NodeJS, mise en cache et dépendances
-              uses: ./.github/actions/node-management-composite-action@v1
+              uses: ./.github/actions/node-management-composite-action
             - name: Test
               run: npm run test -w frontend

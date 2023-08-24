@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Installation de NodeJS, mise en cache et dépendances
-        uses: ./.github/actions/node-management-composite-action
+        uses: ./.github/actions/setup-node
       - name: Build
         run: npm run build -w backend
   build-frontend:

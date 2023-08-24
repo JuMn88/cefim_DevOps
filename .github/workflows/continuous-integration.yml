@@ -16,6 +16,8 @@ jobs:
         uses: ./.github/actions/setup-node
       - name: Build
         run: npm run build -w backend
+      - name: Release
+        uses: softprops/action-gh-release@v1
   build-frontend:
     runs-on: ubuntu-latest
     steps:
@@ -56,4 +58,3 @@ jobs:
         uses: ./.github/actions/setup-node
       - name: Test
         run: npm run test -w frontend
-
